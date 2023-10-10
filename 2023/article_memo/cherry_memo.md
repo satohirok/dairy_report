@@ -19,6 +19,7 @@
 * 11章：エラー解決のために、しっかり読んでおいた方がいい。
 * 12章:目を通しておく。Rubyの周辺知識のようなもの。
 
+
 参考)https://www.youtube.com/watch?v=qqqbHXarPO8
 
 
