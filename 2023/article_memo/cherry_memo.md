@@ -196,3 +196,8 @@ end
 
 
 ###  13章:Rubyに関するその他トピック
+* gemとBundler
+  * Rubyのライブラリはgemという形式でパッケージングされ、gemコマンドを使用してダウンロードする。
+  * ``Bundler``:1つのコマンドで大量のgemをどの環境でも統一のverでインストールすることができる。(大規模なrailsアプリでは大量のgemが必要)
+  * 使いたい　gemが増えたら、``Gemfile``に記述し``bundle　install``
+  * ``Gemfile.lock``:Bundlerで管理すべきgemとそのバージョン番号が記載されている。
