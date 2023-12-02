@@ -21,4 +21,15 @@
 * rails5と7で<%link%>のdeleteメソッドの記述が異なる
 * verや環境の違いによって動かないはザラにあるので、統一した環境下で動作できるdockerは偉大
 * railsではbundlerというツールを指定して、アプリに必要なgemの依存関係の管理やインストールなどを行なう。
-* aaaa
+* railsの基本理念
+  * 同じことを繰り返さない（１箇所にメソッドを整理して記述し再利用できるようにすることで保守性を高める）
+  * 設定よりも規約が優先される。
+* MVC
+  * Controller:routeを介してユーザーからのリクエストを受けて、ModelとViewの仲介を行い、最終的にユーザーにWebページのコンテンツを返す。
+  * Model:データの管理やデータの処理を行うコードを記述する。
+  * View:ブラウザ表示のhtmlを作成する部分を担当する。erbを用いてhtmlの中にrubyを埋め込んで記述することができる。
+* Gemfile
+  * Gemfileにインストールしたいgemを記述→``bundle install``コマンドにて対象のgemがインストールされる。
+  * dockerのコンテナ内で実行するために``docker compose run web bundle install``にて実行するとGemfile.lockが生成される。
+  * Gemfile.lockに基づいてgemがインストールされるようにDockerfileにコピー命令を実行する必要がある。
+  * 
