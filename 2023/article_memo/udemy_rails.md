@@ -32,4 +32,5 @@
   * Gemfileにインストールしたいgemを記述→``bundle install``コマンドにて対象のgemがインストールされる。
   * dockerのコンテナ内で実行するために``docker compose run web bundle install``にて実行するとGemfile.lockが生成される。
   * Gemfile.lockに基づいてgemがインストールされるようにDockerfileにコピー命令を実行する必要がある。
+ 
   * 
