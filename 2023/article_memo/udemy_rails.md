@@ -33,4 +33,13 @@
   * dockerのコンテナ内で実行するために``docker compose run web bundle install``にて実行するとGemfile.lockが生成される。
   * Gemfile.lockに基づいてgemがインストールされるようにDockerfileにコピー命令を実行する必要がある。
  
-  * 
+* Bootstrap
+  * 複数箇所記述する場所があるので後で復習しておく。→アウトプットのときにヤバくなったら（https://www.udemy.com/course/rails-kj/learn/lecture/39866104#questions）を確認する。
+  * JSにおいても設定が必要
+* CSS
+  * 共通レイアウトの編集ファイルはapp > views > layouts > application.html.erb
+  * app > assets > stylesheets > base.scss
+  * aplication.scssファイルに記述したもの@importで読み込む。
+* rails　generate
+  * rails db:migrateでテーブルを作成
+  * rails db:rollbackで直前のmigrateを取り消し
