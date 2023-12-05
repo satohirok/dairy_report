@@ -43,3 +43,8 @@
 * rails　generate
   * rails db:migrateでテーブルを作成
   * rails db:rollbackで直前のmigrateを取り消し
+* rest
+  * railsで使用するHTTPメソッドは、GET(取得),POST(作成),PATCH(部分更新),PUT(置き換え),DELETE(削除)の5つ
+* rails
+  * コントローラではmodelのクラスを使用することができる
+  * form_withヘルパーメソッドを使用することで、サーバー間の通信に必要なname,idなどをより少ない記述で作成することができる。
