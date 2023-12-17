@@ -34,8 +34,19 @@
   config.i18n.available_locales = %i[ja en]
   config.i18n.default_locale = :ja
   ```
-  * config/locales/ja.ymlを作成   
+  * config/locales/ja.ymlを作成
+* 
 * simple_formt:改行文字を含むテキストをブラウザ上で表示させる時に使われるヘルパー
   * 文字列を``<p>``で囲む
   * 改行には``<br/>``を付与
   * 連続した改行については、``</p><p>``を付与
+ 
+## さまざまなマイグレーション操作を使いこなす
+* rails７にて、validateのエラーメッセージを表示するには下記の記述が必要。
+```
+render :new, status: :unprocessable_entity
+#rails7でデフォルトでTurboが導入されているため
+```
+* Turbo:非同期通信によってページの遷移や更新を高速化する機能↓
+  * https://blog.to-ko-s.com/turbo-frames-turbo-streams/
+* 
