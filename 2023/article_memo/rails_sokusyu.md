@@ -41,6 +41,11 @@
   * 改行には``<br/>``を付与
   * 連続した改行については、``</p><p>``を付与
  
+* 削除ボタンの実装(rails7)
+```
+= button_to '削除', task, method: :delete, data: { turbo_confirm: "タスク「#{task.name}」を削除してもよろしいですか」" }, class: 'btn btn-danger'
+```
+ 
 ## さまざまなマイグレーション操作を使いこなす
 * rails７にて、validateのエラーメッセージを表示するには下記の記述が必要。
 ```
