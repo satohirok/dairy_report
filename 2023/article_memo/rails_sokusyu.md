@@ -55,3 +55,6 @@ render :new, status: :unprocessable_entity
 * Turbo:非同期通信によってページの遷移や更新を高速化する機能↓
   * https://blog.to-ko-s.com/turbo-frames-turbo-streams/
 * 
+##　機能の追加
+* csvに関するRubyのメソッド
+* https://qiita.com/you8/items/3238ced3b6b5640ef3d2
