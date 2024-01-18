@@ -1,5 +1,3 @@
-# 2024/1/17(水)
-
 ## 現在やったこと
 * itemテーブルに加えて、cartテーブルと両テーブルを多対多の関係で結びつける中間テーブルcart_idテーブルを作成
 
@@ -52,10 +50,27 @@ class Cart < ApplicationRecord
   has_many :items, :through: :item_carts
 end
 ```
+* current_cartメソッドを作成し、cart_idを作成する。
+* helperメソッドでviewから呼び出せるようにする
+* application.contorollerに記述することで他のコントローラーから呼び出せるようにする
+
+```application.rb
+ class ApplicationController < ActionController::Base
+  helper_method :current_cart
+
+  private
+  def current_cart
+    @current_cart = Cart.find_by(id: session[:cart_id])
+    @current_cart = Cart.create unless @current_cart
+    session[:cart_id] = @current_cart.id
+    @current_cart
+  end
+end
+```
 
 ## 現在抱えている問題
 * 上記の中間テーブルを用いた多対多の３つのテーブルを設計し、どうViewとコントローラを実装して保存していけばいいのかわからない状態
 * 加えて、今回はログイン機能なしで商品にてカートに保存した「状態」をセッション機能にて保持する仕様になっており、どのタイミングでセッションを発生させるのか？
 * 商品一覧画面の「カートに追加」ボタンをクリックすると、カートに商品が追加されるようにする。
 * Viewからパスを送る形？その際にセッションはどう取得し、そのセッションをどう結びつけ、適切なデータをどこにどう保存するのかがわからない。
-* 
+  
