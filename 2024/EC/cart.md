@@ -77,3 +77,4 @@ end
 ## 参考記事
 * 中間テーブル→ https://qiita.com/Lotuswhite/items/0794b468ecc627e01ae1
 * 中間テーブルへの保存→ https://blog.to-ko-s.com/intermediate-table-save/
+* セッション　→ https://qiita.com/ozackiee/items/4ee774c81b2a0c571c05
